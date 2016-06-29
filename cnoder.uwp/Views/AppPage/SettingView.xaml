@@ -7,7 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="48" Text="SettingView"></TextBlock>
+        <HyperlinkButton Content="Go to AboutView " Click="HyperlinkButton_Click"></HyperlinkButton>
+        <HyperlinkButton Content="Go to Baidu" NavigateUri="http://www.baidu.com"></HyperlinkButton>
+    </StackPanel>
 </Page>

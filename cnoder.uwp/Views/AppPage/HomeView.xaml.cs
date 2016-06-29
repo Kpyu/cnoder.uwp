@@ -25,11 +25,20 @@ namespace cnoder.uwp.Views.AppPage
         public HomeView()
         {
             this.InitializeComponent();
+            HomeFrame.Navigate(typeof(SettingView));
         }
 
         private void HamburgerBtn_Click(object sender, RoutedEventArgs e)
         {
             Menu_SplitView.IsPaneOpen = !Menu_SplitView.IsPaneOpen;
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (HomeFrame.CanGoBack)
+            {
+                HomeFrame.GoBack();
+            }
         }
     }
 }

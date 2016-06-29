@@ -26,5 +26,10 @@ namespace cnoder.uwp.Views.AppPage
         {
             this.InitializeComponent();
         }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(AboutView));
+        }
     }
 }

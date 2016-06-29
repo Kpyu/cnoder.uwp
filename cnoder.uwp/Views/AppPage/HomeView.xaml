@@ -25,7 +25,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <RelativePanel>
+        <RelativePanel Grid.Row="0">
             <Button 
                 Name="HamburgerBtn" 
                 RelativePanel.AlignLeftWithPanel="True"
@@ -38,17 +38,18 @@
                 Name="BackBtn"
                 RelativePanel.AlignRightWithPanel="True"
                 FontFamily="Segoe MDl2 Assets"
-                Content="&#xE0C4;"/>
+                Content="&#xE0C4;"
+                Click="BackBtn_Click"/>
             <Button/>
             <Button/>
         </RelativePanel>
-        <RelativePanel>
-            <SplitView Name="Menu_SplitView">
+        <RelativePanel Grid.Row="1">
+            <SplitView Name="Menu_SplitView" CompactPaneLength="50" DisplayMode="CompactOverlay">
                 <SplitView.Pane>
                     <StackPanel>
-                        <TextBlock Text="Main"></TextBlock>
-                        <TextBlock Text="MyFavorite"></TextBlock>
-                        <TextBlock Text="Settings"></TextBlock>
+                        <Button Content="Main"></Button>
+                        <Button Content="MyFavorite"></Button>
+                        <Button Content="Settings"></Button>
                     </StackPanel>
                 </SplitView.Pane>
                 <SplitView.Content>
@@ -60,5 +61,10 @@
                 </SplitView.Content>
             </SplitView>
         </RelativePanel>
+        <StackPanel Grid.Row="2">
+            <Frame Name="HomeFrame">
+
+            </Frame>
+        </StackPanel>
     </Grid>
 </Page>
